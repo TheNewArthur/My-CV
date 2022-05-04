@@ -1,0 +1,93 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  size: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #777777;
+}
+
+.grid-container {
+  background-color: #ff0092;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-auto-rows: minmax(50px, auto);
+  grid-row-gap: 10px;
+  grid-column-gap: 2px;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.grid-item {
+  background-color: #0000ff;
+}
+
+.grid-item-1 {
+  grid-column: 1/-1;
+  text-align: center;
+}
+.grid-item-1 nav {
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.4666666667);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.grid-item-1 .logo {
+  margin-top: 20px;
+  height: 100px;
+}
+
+.grid-item-3 {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  justify-content: center;
+  align-content: stretch;
+  /*.titles {
+      width: 50%;
+      height: fit-content;
+  }
+  .answers {
+      width: 50%;
+  }*/
+}
+.grid-item-3 .bio {
+  grid-column: 1/-1;
+}
+
+.grid-item-4 {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  justify-content: left;
+  align-content: stretch;
+}
+.grid-item-4 .professional-skills {
+  grid-column: 1/-1;
+}
+
+.grid-item-5 {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 70% 20%;
+  justify-content: left;
+  align-content: stretch;
+}
+.grid-item-5 .work-experience {
+  grid-column: 1/-1;
+}
+
+.grid-item-6 {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 70% 20%;
+  justify-content: left;
+  align-content: stretch;
+}
+.grid-item-6 .education {
+  grid-column: 1/-1;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,126 @@
+$default: #ff0092;
+$bgcolor: #777777;
+$color-1: #0000ff;
+$color-2: #00ff00;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    size: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgcolor;
+}
+
+.grid-container {
+    background-color: $default;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-auto-rows: minmax(50px, auto);
+    grid-row-gap: 10px;
+    grid-column-gap: 2px;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+.grid-item {
+    background-color: $color-1;
+}
+
+.grid-item-1 {      //Header
+    grid-column: 1/-1;
+    text-align: center;
+
+    nav {
+        font-size: 25px;
+        background-color: #00000077;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .logo{
+        margin-top: 20px;
+        height: 100px;
+    }
+
+}
+
+.grid-item-2 {      //About me
+    
+}
+
+.grid-item-3 {      //Bio
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: center;
+    align-content: stretch;
+
+    .bio {
+        grid-column: 1/-1;
+    }
+    /*.titles {
+        width: 50%;
+        height: fit-content;
+    }
+    .answers {
+        width: 50%;
+    }*/
+}
+
+.grid-item-4 {      //Professional skills
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: left;
+    align-content: stretch;
+
+    .professional-skills {
+        grid-column: 1/-1;
+    }
+}
+
+.grid-item-5 {      //Work experience
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 70% 20%;
+    justify-content: left;
+    align-content: stretch;
+
+    .work-experience {
+        grid-column: 1/-1;
+    }
+}
+
+.grid-item-6 {      //Education
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 70% 20%;
+    justify-content: left;
+    align-content: stretch;
+
+    .education {
+        grid-column: 1/-1;
+    }
+
+    .school {
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+    }
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+p {
+
+}
