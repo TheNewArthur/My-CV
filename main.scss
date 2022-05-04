@@ -1,8 +1,14 @@
-$default: #ff0092;
-$bgcolor: #777777;
-$color-1: #0000ff;
-$color-2: #00ff00;
-$color-3: #aa45f0;
+$bgcolor: #fcfafa;
+$bordercolor: #5aaa95;
+$textcolor: #003049;
+
+$bordersize: 2px;
+$psize: 15px;
+$h3size: 20px;
+$h2size: 25px;
+$rowgap: 25px;
+$columngap: 10px;
+
 
 * {
     margin: 0px;
@@ -11,48 +17,53 @@ $color-3: #aa45f0;
 }
 
 body{
-    size: 100%;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: $bgcolor;
 }
 
 .grid-container {
-    background-color: $default;
+    background-color: $bgcolor;
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 45% 45%;
     grid-auto-rows: minmax(50px, auto);
     grid-gap: 10px;
     justify-content: center;
     align-content: center;
-    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 .grid-item {
-    background-color: $color-1;
+    padding: 15px;
 }
 
-.grid-item-1 {      //temp
-    background-color: $color-2;
-}
-
-.grid-item-2 {      //temp
-    background-color: $color-3;
+.last-grid-item {
+    margin-bottom: 15px;
 }
 
 .header {
     grid-column: 1/-1;
+    background-image: url(pictures/chalkboard.jpg);
     text-align: center;
+    margin-top: 15px;
+    border: $bordersize outset $bordercolor;
 
     nav {
         font-size: 25px;
-        background-color: #00000077;
         margin-top: 10px;
         margin-bottom: 15px;
+
+        a {
+            color: $bgcolor;
+        }
     }
-    
+
+    p {
+        color: $bgcolor;
+    }
+
     .logo{
         margin-top: 20px;
         height: 100px;
@@ -61,55 +72,72 @@ body{
 
 .about-me {
     grid-column: 1/-1;
+    border: $bordersize outset $bordercolor;
 }
 
 .bio {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 45% 45%;
-
-    .title {
-        grid-column: 1/-1;
-    }
-
+    grid-row-gap: $rowgap;
+    border: $bordersize outset $bordercolor;
 }
 
 .skills {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 45% 45%;
-
-    .title {
-        grid-column: 1/-1;
-    }
+    grid-row-gap: $rowgap;
+    border: $bordersize outset $bordercolor;
 }
 
 .languages {
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 45% 45%;
-
-    .title {
-        grid-column: 1/-1;
-    }
+    grid-row-gap: $rowgap;
+    border: $bordersize outset $bordercolor;
 }
 
 .experience {
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 60% 30%;
-
-    .title {
-        grid-column: 1/-1;
-    }
+    grid-template-columns: 67% 23%;
+    grid-row-gap: $rowgap;
+    grid-column-gap: $columngap;
+    border: $bordersize outset $bordercolor;
 }
 
 .education {
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 45% 25% 20%;
+    grid-row-gap: $rowgap;
+    grid-column-gap: $columngap;
+    border: $bordersize outset $bordercolor;
 
-    .title {
-        grid-column: 1/-1;
-    }
+    
+}
+
+p {
+    color: $textcolor;
+    font-size: $psize;
+}
+h3 {
+    color: $textcolor;
+    font-size: $h3size;
+}
+h2 {
+    color: $textcolor;
+    font-size: $h2size;
+    text-decoration-line: underline;
+    text-decoration-color: $textcolor;
+}
+
+h1 {
+    color: $bgcolor;
+}
+
+.title {
+    grid-column: 1/-1;
 }
