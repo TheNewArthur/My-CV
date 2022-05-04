@@ -14,14 +14,13 @@ body {
 .grid-container {
   background-color: #ff0092;
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 100vw;
   grid-auto-rows: minmax(50px, auto);
-  grid-gap: 10px;
+  grid-row-gap: 10px;
+  grid-column-gap: 2px;
   justify-content: center;
   align-content: center;
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .grid-item {
@@ -29,73 +28,74 @@ body {
 }
 
 .grid-item-1 {
-  background-color: #00ff00;
-}
-
-.grid-item-2 {
-  background-color: #aa45f0;
-}
-
-.header {
   grid-column: 1/-1;
   text-align: center;
 }
-.header nav {
+.grid-item-1 nav {
   font-size: 25px;
   background-color: rgba(0, 0, 0, 0.4666666667);
   margin-top: 10px;
   margin-bottom: 15px;
 }
-.header .logo {
+.grid-item-1 .logo {
   margin-top: 20px;
   height: 100px;
 }
 
-.about-me {
+.grid-item-3 {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  justify-content: center;
+  align-content: stretch;
+  /*.titles {
+      width: 50%;
+      height: fit-content;
+  }
+  .answers {
+      width: 50%;
+  }*/
+}
+.grid-item-3 .bio {
   grid-column: 1/-1;
 }
 
-.bio {
+.grid-item-4 {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 30% 60%;
+  justify-content: left;
+  align-content: stretch;
 }
-.bio .title {
+.grid-item-4 .professional-skills {
   grid-column: 1/-1;
 }
 
-.skills {
+.grid-item-5 {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 70% 20%;
+  justify-content: left;
+  align-content: stretch;
 }
-.skills .title {
+.grid-item-5 .work-experience {
   grid-column: 1/-1;
 }
 
-.languages {
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: 45% 45%;
-}
-.languages .title {
-  grid-column: 1/-1;
-}
-
-.experience {
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: 60% 30%;
-}
-.experience .title {
-  grid-column: 1/-1;
-}
-
-.education {
+.grid-item-6 {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: 30% 30% 30%;
+  justify-content: left;
+  align-content: stretch;
 }
-.education .title {
+.grid-item-6 .education {
   grid-column: 1/-1;
-}/*# sourceMappingURL=main.css.map */
+}
+.grid-item-6 .becode {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+.grid-item-6 .vito {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}/*# sourceMappingURL=testmain.css.map */

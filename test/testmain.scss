@@ -2,7 +2,6 @@ $default: #ff0092;
 $bgcolor: #777777;
 $color-1: #0000ff;
 $color-2: #00ff00;
-$color-3: #aa45f0;
 
 * {
     margin: 0px;
@@ -20,29 +19,20 @@ body{
 .grid-container {
     background-color: $default;
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 100vw;
     grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
+    grid-row-gap: 10px;
+    grid-column-gap: 2px;
     justify-content: center;
     align-content: center;
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .grid-item {
     background-color: $color-1;
 }
 
-.grid-item-1 {      //temp
-    background-color: $color-2;
-}
-
-.grid-item-2 {      //temp
-    background-color: $color-3;
-}
-
-.header {
+.grid-item-1 {      //Header
     grid-column: 1/-1;
     text-align: center;
 
@@ -57,59 +47,85 @@ body{
         margin-top: 20px;
         height: 100px;
     }
+
 }
 
-.about-me {
-    grid-column: 1/-1;
+.grid-item-2 {      //About me
+    
 }
 
-.bio {
-    grid-column: 1/-1;
+.grid-item-3 {      //Bio
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 30% 60%;
+    justify-content: center;
+    align-content: stretch;
 
-    .title {
+    .bio {
         grid-column: 1/-1;
     }
-
-}
-
-.skills {
-    grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: 45% 45%;
-
-    .title {
-        grid-column: 1/-1;
+    /*.titles {
+        width: 50%;
+        height: fit-content;
     }
+    .answers {
+        width: 50%;
+    }*/
 }
 
-.languages {
+.grid-item-4 {      //Professional skills
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 30% 60%;
+    justify-content: left;
+    align-content: stretch;
 
-    .title {
-        grid-column: 1/-1;
-    }
-}
-
-.experience {
-    grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: 60% 30%;
-
-    .title {
+    .professional-skills {
         grid-column: 1/-1;
     }
 }
 
-.education {
+.grid-item-5 {      //Work experience
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 70% 20%;
+    justify-content: left;
+    align-content: stretch;
+
+    .work-experience {
+        grid-column: 1/-1;
+    }
+}
+
+.grid-item-6 {      //Education
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 30% 30% 30%;
+    justify-content: left;
+    align-content: stretch;
 
-    .title {
+    .education {
         grid-column: 1/-1;
     }
+
+    .becode {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+    }
+
+    .vito {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+    }
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+p {
+
 }
