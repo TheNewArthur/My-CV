@@ -40,13 +40,17 @@ body {
 }
 .header nav {
   font-size: 25px;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 25px;
+  margin-bottom: 7.5px;
+}
+.header nav a:hover {
+  color: #5aaa95;
 }
 .header nav a {
   color: #fcfafa;
 }
-.header p {
+.header h2 {
+  padding-top: 2%;
   color: #fcfafa;
 }
 .header .logo {
@@ -102,22 +106,18 @@ body {
 }
 
 p {
-  color: #003049;
-  font-size: 15px;
+  color: #81726a;
+  font-size: 15.832px;
 }
 
 h3 {
-  color: #003049;
-  font-size: 20px;
+  color: #81726a;
+  font-size: 21.11px;
 }
 
 h2 {
   color: #003049;
-  font-size: 25px;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  -webkit-text-decoration-color: #003049;
-          text-decoration-color: #003049;
+  font-size: 28.139px;
 }
 
 h1 {
@@ -127,4 +127,13 @@ h1 {
 
 .title {
   grid-column: 1/-1;
+}
+
+nav a {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+header h2 {
+  color: #fcfafa;
 }/*# sourceMappingURL=main.css.map */
