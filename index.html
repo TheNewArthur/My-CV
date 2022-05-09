@@ -11,7 +11,7 @@
 <body>
     
     <div class="grid-container">
-        <div class="grid-item header">
+        <div class="grid-item header twoD">
             <img class="logo" src="pictures/roundProfilePic.png" alt="Arthur logo">
             <h1>Arthur Pluym</h1>
             <h2>Web Developer</h2>
@@ -20,13 +20,16 @@
                 <a class="icon" href="https://www.linkedin.com/in/arthur-pluym-0b7083181/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
                 <a class="icon" href="https://www.instagram.com/arthurandhistory/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
                 <a class="icon" href="https://www.facebook.com/tuur.pluym/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                
+                <a class="icon" href="#"><ion-icon name="albums-outline"></ion-icon></a>
             </nav>
+            
         </div>
-        <div class="grid-item about-me">
+        <div class="grid-item about-me twoD">
             <h2>About me</h2>
             <p><br>Hello! I'm Arthur Pluym. I'm a junior web-developer student at BeCode. I'm a quick learner and a teamplayer that can work on his own as well. <br><br> I'm quite social and apriciate a good joke once in a while.</p>
         </div>
-        <div class="grid-item bio">
+        <div class="grid-item bio twoD">
             <h2 class="title">Bio</h2>
             <h3>Age</h3>
             <p>24 years</p>
@@ -37,14 +40,14 @@
             <h3>Address</h3>
             <p>Helhoekweg 39 2310 Rijkevorsel</p>
         </div>
-        <div class="grid-item skills">
+        <div class="grid-item skills twoD">
             <h2 class="title">Professional skills</h2>
             <h3>HTML</h3>
             <p>Beginner</p>
             <h3>Css</h3>
             <p>Beginner</p>
         </div>
-        <div class="grid-item languages">
+        <div class="grid-item languages twoD">
             <h2 class="title">Languages</h2>
             <h3>Dutch</h3>
             <p>Mother tongue</p>
@@ -55,14 +58,14 @@
             <h3>Japanese</h3>
             <p>Absolute beginner</p>
         </div>
-        <div class="grid-item experience">
+        <div class="grid-item experience twoD">
             <h2 class="title">Work experience</h2>
             <h3>Vendor - butcherstore Nika Oostmalle</h3>
             <p>01/2022 - 04/2022</p>
             <h3>Shiftleader - KMDA Zoo Antwerpen Flamingo Bar</h3>
             <p>12/2019 - 9/2021</p>
         </div>
-        <div class="grid-item education last-grid-item">
+        <div class="grid-item education last-grid-item twoD">
             <h2 class="title">Education</h2>
             <h3>Becode</h3>
             <p>Junior Web Developer</p>
@@ -71,10 +74,22 @@
             <p>Electronics-Electricity</p>
             <p>Graduated in 2016</p>
         </div>
+
+        <footer>
+            <button type="button" class="button-1 grid-item threeD" onclick="borderchange()">
+                <p class="button-text">Change to 3D</p>
+            </button>
+        </footer>
+        <!--a href="#" class="button">Show a 3D version</a-->
+
     </div>
 
+    
+
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
  
 </body>
 </html>

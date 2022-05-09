@@ -3,6 +3,9 @@ $bordercolor: #5aaa95;
 $titlecolor: #003049;
 $textcolor: #81726a;
 $extracolor: #B30089;
+$nocolor: #00000000;
+$nocolor1: #5aaa950f;
+$nocolor2: #5aaa9544;
 
 $bordersize: 2px;
 $psize: 15.832px;
@@ -10,6 +13,11 @@ $h3size: 21.11px;
 $h2size: 28.139px;
 $rowgap: 25px;
 $columngap: 10px;
+
+$mobile: 412px;
+$tabletmin: 413px;
+$tablet: 810px;
+$laptop: 950px;
 
 
 * {
@@ -22,15 +30,15 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: $bgcolor;
 }
 
 .grid-container {
-    background-color: $bgcolor;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-columns: 45% 45%;
     grid-auto-rows: minmax(50px, auto);
-    grid-gap: 10px;
+    grid-gap: 25px;
     justify-content: center;
     align-content: center;
     overflow-x: hidden;
@@ -39,6 +47,33 @@ body{
 
 .grid-item {
     padding: 15px;
+}
+
+.button-1 {
+    grid-column: 1/-1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
+    border: none;
+    outline: none;
+    background-color: $nocolor;
+    font-size: 25px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.threeD {
+    box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
+    //border: $bordersize outset $bordercolor;
+}
+
+.twoD {
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
+    border: $bordersize outset $bordercolor;
 }
 
 .last-grid-item {
@@ -50,7 +85,8 @@ body{
     background-image: url(pictures/chalkboard.jpg);
     text-align: center;
     margin-top: 15px;
-    border: $bordersize outset $bordercolor;
+    //border: $bordersize outset $bordercolor;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
 
     nav {
         font-size: 25px;
@@ -72,14 +108,15 @@ body{
     }
 
     .logo{
-        margin-top: 20px;
+        margin-top: 5%;
         height: 100px;
     }
 }
 
 .about-me {
     grid-column: 1/-1;
-    border: $bordersize outset $bordercolor;
+    //border: $bordersize outset $bordercolor;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
 }
 
 .bio {
@@ -87,7 +124,8 @@ body{
     display: grid;
     grid-template-columns: 45% 45%;
     grid-row-gap: $rowgap;
-    border: $bordersize outset $bordercolor;
+    //border: $bordersize outset $bordercolor;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
 }
 
 .skills {
@@ -95,7 +133,8 @@ body{
     display: grid;
     grid-template-columns: 45% 45%;
     grid-row-gap: $rowgap;
-    border: $bordersize outset $bordercolor;
+    //border: $bordersize outset $bordercolor;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
 }
 
 .languages {
@@ -103,25 +142,34 @@ body{
     display: grid;
     grid-template-columns: 45% 45%;
     grid-row-gap: $rowgap;
-    border: $bordersize outset $bordercolor;
+    //border: $bordersize outset $bordercolor;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
 }
 
 .experience {
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 67% 23%;
+    grid-template-columns: 72.5% 17.5%;
     grid-row-gap: $rowgap;
     grid-column-gap: $columngap;
-    border: $bordersize outset $bordercolor;
+    //border: $bordersize outset $bordercolor;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
 }
 
 .education {
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 45% 25% 20%;
+    grid-template-columns: 40% 31% 19%;
     grid-row-gap: $rowgap;
     grid-column-gap: $columngap;
-    border: $bordersize outset $bordercolor;
+    //border: $bordersize outset $bordercolor;
+    //box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
+}
+
+footer {
+    grid-column: 1/-1;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -155,4 +203,41 @@ nav a {
 
 header h2 {
     color: $bgcolor;
+}
+
+.button-1:hover {
+    background-color: $nocolor1;
+}
+.button-1:active {
+    background-color: $nocolor2;
+}
+
+.button-name, .button-icon {
+    color: $textcolor;
+    padding: 0 25px;
+    display: inline-flex;
+}
+
+@media (min-width: $laptop){        //DT
+    .grid-container {
+        grid-template-columns: 35% 35%;
+        padding-top: 12.5%;
+        padding-bottom: 12.5%;
+    }
+    
+    .about-me {
+        grid-column: 1/2;
+    }
+
+    .bio {
+        grid-column: 2/-1;
+    }
+
+    .skills {
+        grid-column: 1/2;
+    }
+
+    .languages {
+        grid-column: 2/-1;
+    }
 }

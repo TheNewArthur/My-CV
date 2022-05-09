@@ -8,15 +8,15 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  background-color: #fcfafa;
 }
 
 .grid-container {
-  background-color: #fcfafa;
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: 45% 45%;
   grid-auto-rows: minmax(50px, auto);
-  grid-gap: 10px;
+  grid-gap: 25px;
   justify-content: center;
   align-content: center;
   overflow-x: hidden;
@@ -25,6 +25,30 @@ body {
 
 .grid-item {
   padding: 15px;
+}
+
+.button-1 {
+  grid-column: 1/-1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 25px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.threeD {
+  box-shadow: rgba(90, 170, 149, 0.5) 0px 3px 8px;
+}
+
+.twoD {
+  border: 2px outset #5aaa95;
 }
 
 .last-grid-item {
@@ -36,7 +60,6 @@ body {
   background-image: url(pictures/chalkboard.jpg);
   text-align: center;
   margin-top: 15px;
-  border: 2px outset #5aaa95;
 }
 .header nav {
   font-size: 25px;
@@ -54,13 +77,12 @@ body {
   color: #fcfafa;
 }
 .header .logo {
-  margin-top: 20px;
+  margin-top: 5%;
   height: 100px;
 }
 
 .about-me {
   grid-column: 1/-1;
-  border: 2px outset #5aaa95;
 }
 
 .bio {
@@ -68,7 +90,6 @@ body {
   display: grid;
   grid-template-columns: 45% 45%;
   grid-row-gap: 25px;
-  border: 2px outset #5aaa95;
 }
 
 .skills {
@@ -76,7 +97,6 @@ body {
   display: grid;
   grid-template-columns: 45% 45%;
   grid-row-gap: 25px;
-  border: 2px outset #5aaa95;
 }
 
 .languages {
@@ -84,25 +104,28 @@ body {
   display: grid;
   grid-template-columns: 45% 45%;
   grid-row-gap: 25px;
-  border: 2px outset #5aaa95;
 }
 
 .experience {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 67% 23%;
+  grid-template-columns: 72.5% 17.5%;
   grid-row-gap: 25px;
   grid-column-gap: 10px;
-  border: 2px outset #5aaa95;
 }
 
 .education {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: 45% 25% 20%;
+  grid-template-columns: 40% 31% 19%;
   grid-row-gap: 25px;
   grid-column-gap: 10px;
-  border: 2px outset #5aaa95;
+}
+
+footer {
+  grid-column: 1/-1;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
@@ -136,4 +159,42 @@ nav a {
 
 header h2 {
   color: #fcfafa;
+}
+
+.button-1:hover {
+  background-color: rgba(90, 170, 149, 0.0588235294);
+}
+
+.button-1:active {
+  background-color: rgba(90, 170, 149, 0.2666666667);
+}
+
+.button-name, .button-icon {
+  color: #81726a;
+  padding: 0 25px;
+  display: inline-flex;
+}
+
+@media (min-width: 950px) {
+  .grid-container {
+    grid-template-columns: 35% 35%;
+    padding-top: 12.5%;
+    padding-bottom: 12.5%;
+  }
+
+  .about-me {
+    grid-column: 1/2;
+  }
+
+  .bio {
+    grid-column: 2/-1;
+  }
+
+  .skills {
+    grid-column: 1/2;
+  }
+
+  .languages {
+    grid-column: 2/-1;
+  }
 }/*# sourceMappingURL=main.css.map */
